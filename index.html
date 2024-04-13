@@ -17,16 +17,16 @@
 <div class="container">
 
     <div class="price-toggler">
-        <span class="month active">Dollars</span>
-        <span class="year">Rupees</span>
+        <span class="dollar active">Dollars</span>
+        <span class="rupees">Rupees</span>
     </div>
 
     <div class="box-container">
 
         <div class="box">
             <h3>basic</h3>
-            <div class="price month"><span>$</span>10.<span>00</span></div>
-            <div class="price year"><span>₹</span>800.<span>00</span></div>
+            <div class="price dollar"><span>$</span>10.<span>00</span></div>
+            <div class="price rupees"><span>₹</span>800.<span>00</span></div>
             <div class="list">
                 <p> <i class="fas fa-check"></i> 1 person </p>
                 <p> <i class="fas fa-check"></i> 10GB storage </p>
@@ -39,8 +39,8 @@
 
         <div class="box">
             <h3>regular</h3>
-            <div class="price month"><span>$</span>30.<span>00</span></div>
-            <div class="price year"><span>₹</span>2500.<span>00</span></div>
+            <div class="price dollar"><span>$</span>30.<span>00</span></div>
+            <div class="price rupees"><span>₹</span>2500.<span>00</span></div>
             <div class="list">
                 <p> <i class="fas fa-check"></i> 10 person </p>
                 <p> <i class="fas fa-check"></i> 50GB storage </p>
@@ -53,8 +53,8 @@
 
         <div class="box">
             <h3>business</h3>
-            <div class="price month"><span>$</span>90.<span>00</span></div>
-            <div class="price year"><span>₹</span>7500.<span>00</span></div>
+            <div class="price dollar"><span>$</span>90.<span>00</span></div>
+            <div class="price rupees"><span>₹</span>7500.<span>00</span></div>
             <div class="list">
                 <p> <i class="fas fa-check"></i> 100 person </p>
                 <p> <i class="fas fa-check"></i> 100GB storage </p>
@@ -71,25 +71,25 @@
 
 <script>
 
-let month = document.querySelector('.price-toggler .month');
-let year = document.querySelector('.price-toggler .year');
-let monthAmount = document.querySelectorAll('.box-container .box .month');
-let yearAmount = document.querySelectorAll('.box-container .box .year');
+let dollar = document.querySelector('.price-toggler .dollar');
+let rupees = document.querySelector('.price-toggler .rupees');
+let dollarAmount = document.querySelectorAll('.box-container .box .dollar');
+let rupeesAmount = document.querySelectorAll('.box-container .box .rupees');
 
-year.onclick = () =>{
-    year.classList.add('active');
-    month.classList.remove('active');
+rupees.onclick = () =>{
+    rupees.classList.add('active');
+    dollar.classList.remove('active');
 
-    monthAmount.forEach(mo =>{ mo.style.display = 'none' });
-    yearAmount.forEach(yr =>{ yr.style.display = 'block' });
+    dollarAmount.forEach(mo =>{ mo.style.display = 'none' });
+    rupeesAmount.forEach(yr =>{ yr.style.display = 'block' });
 };
 
-month.onclick = () =>{
-    year.classList.remove('active');
-    month.classList.add('active');
+dollar.onclick = () =>{
+    rupees.classList.remove('active');
+    dollar.classList.add('active');
 
-    monthAmount.forEach(mo =>{ mo.style.display = 'block' });
-    yearAmount.forEach(yr =>{ yr.style.display = 'none' });
+    dollarAmount.forEach(mo =>{ mo.style.display = 'block' });
+    rupeesAmount.forEach(yr =>{ yr.style.display = 'none' });
 };
 
 </script>
